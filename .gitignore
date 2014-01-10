@@ -2,3 +2,5 @@
 *.pyc
 
 # Temp and output folders
+wpsoutputs/*
+wpstemp/*
