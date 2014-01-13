@@ -24,10 +24,17 @@ class Process(WPSProcess):
     def execute( self ) : 
 
         output = []
-        random.seed()
-        for i in range(self.textIn.getValue()):
-            output.append(random.random())
 
-        self.textOut.setValue(','.join(map(str, output))) 
+        random.seed()
+        output.append("id,val1,val2,val3,val3,val4,val5\n")
+        for i in range(self.textIn.getValue()):
+            output.append("id"+str(i)+","+
+                str(random.random())+","+
+                str(random.random())+","+
+                str(random.random())+","+
+                str(random.random())+","+
+                str(random.random())+"\n")
+
+        self.textOut.setValue(''.join(map(str, output))) 
 
         return 
