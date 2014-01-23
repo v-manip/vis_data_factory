@@ -26,7 +26,7 @@ class Process(WPSProcess):
         output = []
 
         random.seed()
-        output.append("id,val1,val2,val3,val3,val4,val5\n")
+        output.append("id,val1,val2,val3,val4,val5\n")
         for i in range(self.textIn.getValue()):
             output.append("id"+str(i)+","+
                 str(random.random())+","+
